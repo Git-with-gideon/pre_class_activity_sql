@@ -50,16 +50,3 @@ A MySQL database system to track and analyze student grades for Linux and Python
    SELECT COUNT(*) FROM students;
    ```
 
-## Key Results
-- **Linux failure rate**: 30% (3/10 students below 50%)
-- **Python success rate**: 100% (all students passed)
-- **Course engagement**: 60% of students enrolled in courses
-- **Top performer**: Alice with 96.5% average across both courses
-
-## Files
-- `student_performance.sql` - Complete database implementation
-- `README.md` - This documentation
-
----
-**Course**: Database Management Systems - ALU Rwanda  
-**Status**: Ready for submission and oral viva
