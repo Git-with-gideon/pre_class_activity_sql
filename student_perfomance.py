@@ -12,3 +12,11 @@ CREATE TABLE IF NOT EXISTS linux_grades (
     grade_obtained INT NOT NULL,
     FOREIGN KEY (student_id) REFERENCES students(student_id)
 );
+# table for the python grades
+CREATE TABLE IF NOT EXISTS python_grades (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(255) NOT NULL,
+    student_id INT,
+    grade_obtained INT NOT NULL,
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
+);
