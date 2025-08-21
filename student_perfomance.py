@@ -66,3 +66,13 @@ INSERT INTO python_grades (course_id, course_name, student_id, grade_obtained) V
 (208, 'Python Programming', 12, 92), -- Liam (Python only)
 (209, 'Python Programming', 13, 77), -- Mia (Python only)
 (210, 'Python Programming', 14, 85); -- Nora (Python only)
+
+-- 3. Find students who scored less than 50% in the Linux course
+SELECT
+    s.student_name
+FROM
+    students s
+JOIN
+    linux_grades lg ON s.student_id = lg.student_id
+WHERE
+    lg.grade_obtained < 50;
