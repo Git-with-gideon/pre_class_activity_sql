@@ -110,9 +110,9 @@ WHERE student_id IN (
     SELECT student_id
     FROM linux_grades
 );
-
 -- Question 5: Who took both courses?
 -- This finds students who took BOTH Linux AND Python courses
+-- 5. Find students who took both courses
 SELECT
     s.student_name
 FROM
@@ -122,16 +122,15 @@ JOIN
 JOIN
     python_grades pg ON s.student_id = pg.student_id;
 
--- Question 6: What's the average grade for each course?
--- This calculates the average grade separately for Linux and Python
--- First, we get the average for Linux
+-- 6. Calculate the average grade per course (Linux and Python separately)
+-- Average grade for Linux
 SELECT
     'Linux' AS course,
     AVG(grade_obtained) AS average_grade
 FROM
     linux_grades
 UNION ALL
--- Then, we get the average for Python
+-- Average grade for Python
 SELECT
     'Python' AS course,
     AVG(grade_obtained) AS average_grade
