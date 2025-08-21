@@ -50,4 +50,4 @@ To execute the queries, you can use a MySQL client or a command-line tool.
     Alternatively, you can copy and paste the entire script into your MySQL client and run it.
 
 ## Author
-This project was developed by your group name.
+This project was developed by Group Coding Lab 23.
