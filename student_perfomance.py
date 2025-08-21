@@ -88,3 +88,15 @@ WHERE student_id IN (
     SELECT student_id
     FROM python_grades
 )
+
+UNION
+SELECT student_name
+FROM students
+WHERE student_id IN (
+    -- Students who took only Python
+    SELECT student_id
+    FROM python_grades
+    EXCEPT
+    SELECT student_id
+    FROM linux_grades
+);
