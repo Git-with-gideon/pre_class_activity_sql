@@ -76,3 +76,15 @@ JOIN
     linux_grades lg ON s.student_id = lg.student_id
 WHERE
     lg.grade_obtained < 50;
+
+-- 4. Find students who took only one course (either Linux or Python, not both)
+SELECT student_name
+FROM students
+WHERE student_id IN (
+    -- Students who took only Linux
+    SELECT student_id
+    FROM linux_grades
+    EXCEPT
+    SELECT student_id
+    FROM python_grades
+)
