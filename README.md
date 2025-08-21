@@ -1,0 +1,1 @@
+# pre_class_activity_sql
